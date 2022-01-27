@@ -12,3 +12,5 @@ https://github.com/aidyel/Run-Buddy.git
 
 ## Contribution
 Made with ❤️ by Aida Tavarez
+
+### ©️2019 Run Buddy, Inc 
