@@ -1,8 +1,15 @@
+:root {
+    --primary-color: #fce138
+    --secondary-color: #025e76;
+    --tertiary-color: #39a6b2
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 body{
      /* more on this crazy alphanumerical value in a minute! */
@@ -24,6 +31,7 @@ header {
     background-size: cover;
     background-position: 80%;
     background-attachment: fixed;
+    z-index: 9999;
 }
 
  /* Applies 10px to the top, 15px to the right, 20px to the bottom, 25px to the left (in that specific clockwise order) */
@@ -123,27 +131,16 @@ section {
 }
 
 .hero-form {
-   background-color: #fce138;
+    border: 3px solid #024e76;
+   background-color: rgba(255, 255, 56, 0.8);
    padding: 20px;
    color: #024e76;
    width: 40%;
    margin: 3.5%;
+   border-radius: 15px;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.hero-form {
-   border: solid 3px #024e76;
-   border-radius: 15px;
-}
-
-.hero-form {
-   border: 3px solid #024e76;
-   background-color: rgb(252, 225, 56);
-   padding: 20px;
-   color: #024e76;
-   box-shadow: rgba(0, 0, 0, 0.8);
-   border-radius: 15px;
-}
 
 .hero-form h3 {
    font-size: 24px;
@@ -377,11 +374,71 @@ section {
     margin-bottom: 15px;
     margin-top: 5px;
     border-radius: 10px;
-    background-color: rgba(2, 78, 118, 1);
+    background-color: rgba(255,255,255, 0.75);
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
     background-color: rgba(255, 255, 255, 0.8);
+}
+
+.checkbox-wrapper input, .radio-wrapper input {
+    opacity: 0;
+}
+
+.checkbox-wrapper label, .radio-wrapper label {
+    position: relative;
+    left: 10px;
+    margin: 10px;
+    line-height: 1.6;
+}
+
+.checkbox-wrapper label, .radio-wrapper label::before {
+    content: "";
+    height: 20px;
+    width: 20px;
+    background: rgba(255, 255, 255, 0.75);  
+    border: 1px solid #024e76;
+    position: absolute;
+    top: -4px;
+    left: -30px;
+}
+
+.radio-wrapper label::before {
+    border-radius: 50%;
+}
+
+.radio-wrapper label::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #024e76;
+    position: absolute;
+    left: -29px;
+    top: -3px;
+    background-image: radial-gradient(circle, #39a6b2, #024e76);
+  }
+  
+  .checkbox-wrapper label::after {
+    content: "";
+    height: 6px;
+    width: 14px;
+    border-left: 2px solid #024e76;
+    border-bottom: 2px solid #024e76;
+    position: absolute;
+    left: -26px;
+    top: 1px;
+    transform: rotate(-58deg);
+  }
+
+.checkbox-wrapper input + label::after, 
+.radio-wrapper input + label::after {
+    content: none;
+    }
+
+.checkbox-wrapper input:checked + label::after, 
+.radio-wrapper input:checked + label::after {
+  content: "";
 }
 
 
