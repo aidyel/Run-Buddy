@@ -34,11 +34,6 @@ header {
     z-index: 9999;
 }
 
- /* Applies 10px to the top, 15px to the right, 20px to the bottom, 25px to the left (in that specific clockwise order) */
- header {
-     padding: 10ox 15px 20px 25px;
- }
-
  header h1 {
      font-weight: bold;
      font-size: 36px;
@@ -56,16 +51,12 @@ header {
      margin: 7px 0;
 }
 
-.header nav ul {
+header nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     list-style: none;
-}
- 
-header nav ul li {
-    display: inline;
 }
 
 header nav ul li a {
@@ -74,6 +65,16 @@ header nav ul li a {
     font-size: 1.55vw; 
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
 }
+
+header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
+}
+
+/* Header /NavBar END */
+
 
 footer {
     background: #fce138;
@@ -484,13 +485,6 @@ section {
 
     header nav ul li a {
         font-size: 20px;
-    }
-
-    header nav ul li a:hover {
-        background: #fce138;
-        color: #024e76;
-        border-radius: 15px;
-        text-shadow: none;
     }
 
     footer h2, footer div {
